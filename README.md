@@ -13,7 +13,7 @@ Dart package to generate repositories using retrofit clients
 Install via `dart pub add`:
 
 ```sh
-dart pub add repo_generator
+dart pub add repo_generator_dart
 ```
 
 ---

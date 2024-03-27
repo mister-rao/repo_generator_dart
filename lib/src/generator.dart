@@ -6,9 +6,8 @@ import 'package:analyzer/dart/element/type.dart';
 import 'package:build/build.dart';
 import 'package:code_builder/code_builder.dart';
 import 'package:dart_style/dart_style.dart';
+import 'package:repo_generator_dart/repo_generator.dart';
 import 'package:source_gen/source_gen.dart';
-
-import '../repo_generator.dart';
 
 class RepositoryGenerator extends GeneratorForAnnotation<RepositoryClass> {
   static const _clientVar = '_client';
@@ -150,8 +149,7 @@ class RepositoryGenerator extends GeneratorForAnnotation<RepositoryClass> {
     final blocks = <Code>[];
 
     blocks.add(
-      Code(
-          '''
+      Code('''
 
         try {
             final response = await $_clientVar.${m.displayName}($args);
